@@ -6,6 +6,7 @@ create table documents(
   modified_date date,
   author varchar(200),
   publisher varchar(40),
+  other_participants_or_mentioned_people varchar(2000),
   notes varchar(2000),
   unique key url(`url`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
