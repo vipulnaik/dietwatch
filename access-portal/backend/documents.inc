@@ -1,9 +1,9 @@
 <?php
 
-print '<h4 id="documents">Documents</h4>';
 $documentSelectQuery = "select * from documents;";
 $documentSelectResult = $mysqli -> query($documentSelectQuery);
 if ($documentSelectResult -> num_rows > 0) {
+  print '<h4 id="documents">Documents (' . ($documentSelectResult -> num_rows) . ' in number)</h4>';
   print "\n";
   print '<table id="myTableDocuments" class="tablesorter">'."\n";
   print "<thead>\n";
@@ -38,6 +38,6 @@ if ($documentSelectResult -> num_rows > 0) {
   }
   print "</tbody>\n</table>\n";
 } else {
-  print '<p>No documents yet!</p>';
+  print '<h4 id="documents">Documents (none yet!)</h4>';
 }
 ?>
