@@ -31,8 +31,8 @@ if ($documentSelectResult -> num_rows > 0) {
 
     print '<td>'.$row['publisher']."</td>\n";
 
-    print '<td>'.explodePersonPsv($row['other_participants'])."</td>\n";
-    print '<td>'.explodeTagPsv($row['document_scope'])."</td>\n";
+    print '<td>'.explodePersonPsv($row['other_participants_or_mentioned_people'])."</td>\n";
+    print '<td>'.explodeTagPsv($row['tags'])."</td>\n";
     print '<td>'.cleanNotes($row['notes'])."</td>\n";
     print "</tr>\n";
   }
