@@ -12,7 +12,7 @@ if ($documentSelectResult -> num_rows > 0) {
   print '<th>Publication date</th>';
   print '<th>Author</th>';
   print '<th>Publisher</th>';
-  print '<th>Other participants</th>';
+  print '<th>Other participants and mentioned people</th>';
   print '<th>Tags</th>';
   print '<th>Notes</th>';
   print '</tr>';
@@ -31,7 +31,7 @@ if ($documentSelectResult -> num_rows > 0) {
 
     print '<td>'.$row['publisher']."</td>\n";
 
-    print '<td>'.explodePersonPsv($row['other_participants_or_mentioned_people'])."</td>\n";
+    print '<td>'.explodePersonPsv($row['other_participants_and_mentioned_people'])."</td>\n";
     print '<td>'.explodeTagPsv($row['tags'])."</td>\n";
     print '<td>'.cleanNotes($row['notes'])."</td>\n";
     print "</tr>\n";
