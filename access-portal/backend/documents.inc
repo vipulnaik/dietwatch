@@ -14,6 +14,7 @@ if ($documentSelectResult -> num_rows > 0) {
   print '<th>Publisher</th>';
   print '<th>Other participants and mentioned people</th>';
   print '<th>Tags</th>';
+  print '<th>Animal types</th>';
   print '<th>Notes</th>';
   print '</tr>';
   print "</thead>\n<tbody>\n";
@@ -33,6 +34,7 @@ if ($documentSelectResult -> num_rows > 0) {
 
     print '<td>'.explodePersonPsv($row['other_participants_and_mentioned_people'])."</td>\n";
     print '<td>'.explodeTagPsv($row['tags'])."</td>\n";
+    print '<td>'.explodeAnimalTypePsv($row['animal_types'])."</td>\n";
     print '<td>'.cleanNotes($row['notes'])."</td>\n";
     print "</tr>\n";
   }

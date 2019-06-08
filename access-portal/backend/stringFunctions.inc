@@ -21,12 +21,20 @@ function explodeTagCsv($tagCsv) {
   return explodeTagCharSepValues($tagCsv, ",");
 }
 
+function explodeAnimalTypeCsv($animalTypeCsv) {
+  return explodeAnimalTypeCharSepValues($animalTypeCsv, ",");
+}
+
 function explodePersonPsv($personPsv) {
   return explodePersonCharSepValues($personPsv, "|");
 }
 
 function explodeTagPsv($tagPsv) {
   return explodeTagCharSepValues($tagPsv, "|");
+}
+
+function explodeAnimalTypePsv($animalTypePsv) {
+  return explodeAnimalTypeCharSepValues($animalTypePsv, "|");
 }
 
 function explodePersonCharSepValues($personCsv, string $char) {
@@ -43,6 +51,15 @@ function explodeTagCharSepValues($tagCsv, string $char) {
   $formattedString = '';
   foreach ($tagsList as $tag) {
     $formattedString = $formattedString . '<a href="/tag.php?tag='.urlencode($tag).'">'.$tag.'</a> ';
+  }
+  return $formattedString;
+}
+
+function explodeTagAnimalTypeSepValues($animalTypeCsv, string $char) {
+  $animalTypesList = explode($char,$animalTypeCsv);
+  $formattedString = '';
+  foreach ($animalTypesList as $animalType) {
+    $formattedString = $formattedString . '<a href="/animal_type.php?tag='.urlencode($animalType).'">'.$animalType.'</a> ';
   }
   return $formattedString;
 }
