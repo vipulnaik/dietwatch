@@ -13,36 +13,36 @@ function cleanNotes($notes) {
   return $augmentedNotes;
 }
 
-function explodeDonorCsv($donorCsv) {
-  return explodeDonorCharSepValues($donorCsv, ",");
+function explodePersonCsv($personCsv) {
+  return explodePersonCharSepValues($personCsv, ",");
 }
 
-function explodeDoneeCsv($doneeCsv) {
-  return explodeDoneeCharSepValues($doneeCsv, ",");
+function explodeTagCsv($tagCsv) {
+  return explodeTagCharSepValues($tagCsv, ",");
 }
 
-function explodeDonorPsv($donorPsv) {
-  return explodeDonorCharSepValues($donorPsv, "|");
+function explodePersonPsv($personPsv) {
+  return explodePersonCharSepValues($personPsv, "|");
 }
 
-function explodeDoneePsv($doneePsv) {
-  return explodeDoneeCharSepValues($doneePsv, "|");
+function explodeTagPsv($tagPsv) {
+  return explodeTagCharSepValues($tagPsv, "|");
 }
 
-function explodeDonorCharSepValues($donorCsv, string $char) {
-  $donorsList = explode($char,$donorCsv);
+function explodePersonCharSepValues($personCsv, string $char) {
+  $personsList = explode($char,$personCsv);
   $formattedString = '';
-  foreach ($donorsList as $donor) {
-    $formattedString = $formattedString . '<a href="/donor.php?donor='.urlencode($donor).'">'.$donor.'</a> ';
+  foreach ($personsList as $person) {
+    $formattedString = $formattedString . '<a href="/person.php?person='.urlencode($person).'">'.$person.'</a> ';
   }
   return $formattedString;
 }
 
-function explodeDoneeCharSepValues($doneeCsv, string $char) {
-  $doneesList = explode($char,$doneeCsv);
+function explodeTagCharSepValues($tagCsv, string $char) {
+  $tagsList = explode($char,$tagCsv);
   $formattedString = '';
-  foreach ($doneesList as $donee) {
-    $formattedString = $formattedString . '<a href="/donee.php?donee='.urlencode($donee).'">'.$donee.'</a> ';
+  foreach ($tagsList as $tag) {
+    $formattedString = $formattedString . '<a href="/tag.php?tag='.urlencode($tag).'">'.$tag.'</a> ';
   }
   return $formattedString;
 }
