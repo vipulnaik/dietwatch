@@ -55,7 +55,7 @@ function explodeTagCharSepValues($tagCsv, string $char) {
   return $formattedString;
 }
 
-function explodeTagAnimalTypeSepValues($animalTypeCsv, string $char) {
+function explodeAnimalTypeCharSepValues($animalTypeCsv, string $char) {
   $animalTypesList = explode($char,$animalTypeCsv);
   $formattedString = '';
   foreach ($animalTypesList as $animalType) {
