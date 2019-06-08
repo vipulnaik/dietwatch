@@ -1,7 +1,6 @@
 <?php
 
-<h4 id="people">People</h4>
-
-<p>No people yet!</p>
+print '<h4 id="people">People</h4>';
+print '<p>No people yet!</p>';
 
 ?>
