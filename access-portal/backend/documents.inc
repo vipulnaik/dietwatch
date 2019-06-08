@@ -1,6 +1,6 @@
 <?php
 
-$documentSelectQuery = "select * from documents;";
+$documentSelectQuery = "select * from documents order by publication_date;";
 $documentSelectResult = $mysqli -> query($documentSelectQuery);
 if ($documentSelectResult -> num_rows > 0) {
   print '<h4 id="documents">Documents (' . ($documentSelectResult -> num_rows) . ' in number)</h4>';

@@ -13,7 +13,6 @@ include_once("backend/globalVariables/passwordFile.inc");
 print '<body>';
 print '<script>$(document).ready(function()
     {
-        $("#myTablePeople").tablesorter({textExtraction: stripCommas});
         $("#myTableDocuments").tablesorter({textExtraction: stripCommas});
     }
 ); </script>'."\n";
