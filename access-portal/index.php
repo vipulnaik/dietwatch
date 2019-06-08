@@ -20,13 +20,13 @@ print "<h3>Diet Watch: Documents and People</h3>";
 include_once('preamble.inc');
 print '<h4>Table of contents</h4>';
 print '<ul>';
-print '<li><a href="#people">People</a></li>';
 print '<li><a href="#documents">Documents</a></li>';
+print '<li><a href="#people">People</a></li>';
 
 print '</ul>';
 
-include ("backend/people.inc");
 include ("backend/documents.inc");
+include ("backend/people.inc");
 
 include_once("anchorjs.inc");
 print '</body>';
