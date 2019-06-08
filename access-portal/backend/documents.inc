@@ -24,12 +24,11 @@ if ($documentSelectResult -> num_rows > 0) {
     print '<td>'.$row['publication_date']."</td>\n";
     if ($row['author'] != '') {
       # Change this to check if author is in list
-      print '<td>'.explodeDonorPsv($row['author'])."</td>\n";
+      print '<td>'.explodePersonPsv($row['author'])."</td>\n";
     } else {
       print "<td></td>\n";
     }
 
-    # Link to publisher as donor or donor?
     print '<td>'.$row['publisher']."</td>\n";
 
     print '<td>'.explodePersonPsv($row['other_participants'])."</td>\n";
