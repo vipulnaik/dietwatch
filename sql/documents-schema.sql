@@ -9,7 +9,6 @@ create table documents(
   other_participants_and_mentioned_people varchar(2000),
   tags varchar(2000), /* Pipe-separated list taking values from "Animal consciousness", "Animal harm per unit food consumption", "Personal journey", "Exhortation against animal consumption", "Dealing with moral uncertainty", "Skepticism of case for vegetarianism", "Health effects of veganism", "Practical vegan and vegetarian food advice" */
   animal_types varchar(200), /* Pipe-separated list taking values from "Fish", "Insect", "Bivalve", "Poultry", "Cattle", "Pig" */
-  food_types varchar(200), /* Pipe-separated list taking values from "Dairy", "Egg", "Chicken", ... */
   notes varchar(2000),
   unique key url(`url`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
