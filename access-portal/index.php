@@ -1,6 +1,6 @@
 <?php
 include_once('doctype.inc');
-# `include_once('analytics.inc');
+include_once('analytics.inc');
 include_once('strip-commas.inc');
 include_once('backend/stringFunctions.inc');
 include_once('backend/cachingFunctions.inc');
