@@ -25,6 +25,10 @@ function explodeAnimalTypeCsv($animalTypeCsv) {
   return explodeAnimalTypeCharSepValues($animalTypeCsv, ",");
 }
 
+function explodePeopleClusterCsv($peopleClusterCsv) {
+  return explodePeopleClusterCharSepValues($peopleClusterCsv, ",");
+}
+
 function explodePersonPsv($personPsv) {
   return explodePersonCharSepValues($personPsv, "|");
 }
@@ -35,6 +39,10 @@ function explodeTagPsv($tagPsv) {
 
 function explodeAnimalTypePsv($animalTypePsv) {
   return explodeAnimalTypeCharSepValues($animalTypePsv, "|");
+}
+
+function explodePeopleClusterPsv($peopleClusterPsv) {
+  return explodePeopleClusterCharSepValues($peopleClusterPsv, "|");
 }
 
 function explodePersonCharSepValues($personCsv, string $char) {
@@ -60,6 +68,15 @@ function explodeAnimalTypeCharSepValues($animalTypeCsv, string $char) {
   $formattedString = '';
   foreach ($animalTypesList as $animalType) {
     $formattedString = $formattedString . '<a href="/animal_type.php?tag='.urlencode($animalType).'">'.$animalType.'</a> ';
+  }
+  return $formattedString;
+}
+
+function explodePeopleClusterCharSepValues($peopleClusterCsv, string $char) {
+  $peopleClustersList = explode($char,$peopleClusterCsv);
+  $formattedString = '';
+  foreach ($peopleClustersList as $peopleCluster) {
+    $formattedString = $formattedString . '<a href="/people_cluster.php?tag='.urlencode($peopleCluster).'">'.$peopleCluster.'</a> ';
   }
   return $formattedString;
 }
