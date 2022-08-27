@@ -7,8 +7,8 @@ init:
 
 .PHONY: reset
 reset:
-	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists documents;"
-	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists people;"
+	mysql $(MYSQL_ARGS) $(DATABASE) -e "drop table if exists documents;"
+	mysql $(MYSQL_ARGS) $(DATABASE) -e "drop table if exists people;"
 
 .PHONY: read
 read:
