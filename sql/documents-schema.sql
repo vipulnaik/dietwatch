@@ -12,4 +12,4 @@ create table documents(
   people_clusters varchar(2000), /* Effective altruist, Libertarian, Negative utilitarian, Tomasik, Caplan, Hanson */
   notes varchar(2000),
   unique key url(`url`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
