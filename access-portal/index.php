@@ -8,7 +8,7 @@ include_once('backend/cachingFunctions.inc');
 print "<title>Diet Watch: Documents and People</title>";
 print '<link href="style.css" rel="stylesheet" type="text/css" />'."\n";
 include_once('style.inc');
-print '<script type="text/javascript" src="./jquery-3.1.1.min.js"></script>'."\n";
+print '<script type="text/javascript" src="./jquery-3.7.1.min.js"></script>'."\n";
 print '<script type="text/javascript" src="./jquery.tablesorter.js"></script>'."\n";
 print '</head>';
 include_once("backend/globalVariables/passwordFile.inc");
