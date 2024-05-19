@@ -13,6 +13,7 @@ print '<script type="text/javascript" src="./jquery.tablesorter.js"></script>'."
 print '</head>';
 include_once("backend/globalVariables/passwordFile.inc");
 print '<body>';
+print '<script>change_theme.set_theme_from_local_storage();</script>';
 print '<script>$(document).ready(function()
     {
         $("#myTableDocuments").tablesorter({textExtraction: stripCommas});
@@ -40,6 +41,5 @@ include ("backend/documents.inc");
 include ("backend/people.inc");
 
 include_once("anchorjs.inc");
-print '<script>change_theme.set_theme_from_local_storage();</script>';
 print '</body>';
 ?>
